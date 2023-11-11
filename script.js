@@ -2,14 +2,14 @@ let isPlayerOne = true;
 let cells = document.getElementsByClassName("cells");
 
 for (let i=0; i <cells.length; i++) {
-    cells[i].addEventListener("clik" , userMove)
+    cells[i].addEventListener('clik' , userMove);
 }
 
 function userMove (e) {
     let cellValue = e.target.innerHTML;
     if (!cellValue.length){
-        e.target.innerHTML = isPlayerOne? "X" : "O";
-        isPlayerOne = isPlayerOne;
+        e.target.innerHTML = isPlayerOne? 'X' : 'O';
+        isPlayerOne = |isPlayerOne;
 
         checkline(0, 1, 2);
         checkline(3, 4, 5);
@@ -34,5 +34,5 @@ function checkline(c1, c2, c3){
 }
 
 function showWinner (player){
-    document.querySelector("#result").innerHTML = player + "win";
+    document.querySelector('#results').innerHTML = player + " win";
 }
