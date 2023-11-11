@@ -2,14 +2,14 @@ let isPlayerOne = true;
 let cells = document.getElementsByClassName("cells");
 
 for (let i=0; i <cells.length; i++) {
-    cells[i].addEventListener('clik' , userMove);
+    cells[i].addEventListener('click' , userMove);
 }
 
 function userMove (e) {
     let cellValue = e.target.innerHTML;
-    if (!cellValue.length){
-        e.target.innerHTML = isPlayerOne? 'X' : 'O';
-        isPlayerOne = |isPlayerOne;
+    if (!cellValue.length) {
+        e.target.innerHTML = isPlayerOne? 'X' : 'O' ;
+        isPlayerOne = !isPlayerOne;
 
         checkline(0, 1, 2);
         checkline(3, 4, 5);
